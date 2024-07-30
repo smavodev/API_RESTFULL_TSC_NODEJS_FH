@@ -1,5 +1,6 @@
 import express, { Router } from 'express'
 import path from 'path'
+import logger from '../config/logger'
 
 interface Options {
   port: number
@@ -45,7 +46,7 @@ export class Server {
     })
 
     this.serverListener = this.app.listen(this.port, () => {
-      console.log(`Server running on port:  http://localhost:${this.port}`)
+      logger.info(`Server running on port:  http://localhost:${this.port}`)
     })
   }
 
