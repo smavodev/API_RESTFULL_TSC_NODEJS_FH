@@ -1,6 +1,11 @@
 import { bcryptAdapter } from '../../config'
 import { UserModel } from '../../data'
-import { CustomError, RegisterUserDto, UserEntity } from '../../domain'
+import {
+  CustomError,
+  LoginUserDto,
+  RegisterUserDto,
+  UserEntity,
+} from '../../domain'
 
 export class AuthService {
   // eslint-disable-next-line @typescript-eslint/no-useless-constructor,@typescript-eslint/no-empty-function
@@ -16,7 +21,7 @@ export class AuthService {
 
       user.password = bcryptAdapter.hash(registerUserDto.password)
 
-      // Comparacion de contraseñas
+      // // Password of compare
       // const reverse = bcryptAdapter.compare(registerUserDto.password, user.password)
       // console.log(reverse, registerUserDto.password, user.password)
 
@@ -30,6 +35,28 @@ export class AuthService {
       }
     } catch (error) {
       throw CustomError.internalServer(`${error}`)
+    }
+  }
+
+  public async loginUser(loginUserDto: LoginUserDto) {
+    const user = await UserModel.findOne({ email: loginUserDto.email })
+    if (!user) throw CustomError.badRequest('Email not exist')
+
+    if (typeof user.password !== 'string') {
+      throw CustomError.internalServer('User password is missing or invalid')
+    }
+
+    const isMatching = bcryptAdapter.compare(
+      loginUserDto.password,
+      user.password
+    )
+    if (!isMatching) throw CustomError.badRequest('Password is not valid')
+
+    const { password, ...userEntity } = UserEntity.fromObject(user)
+
+    return {
+      user: userEntity,
+      token: 'token',
     }
   }
 }
