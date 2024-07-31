@@ -1,3 +1,4 @@
+import { bcryptAdapter } from '../../config'
 import { UserModel } from '../../data'
 import { CustomError, RegisterUserDto, UserEntity } from '../../domain'
 
@@ -12,15 +13,21 @@ export class AuthService {
 
     try {
       const user = new UserModel(registerUserDto)
+
+      user.password = bcryptAdapter.hash(registerUserDto.password)
+
+      // Comparacion de contraseñas
+      // const reverse = bcryptAdapter.compare(registerUserDto.password, user.password)
+      // console.log(reverse, registerUserDto.password, user.password)
+
       await user.save()
 
-      const { password, ...userEntity } = UserEntity.fromObject(user);
+      const { password, ...userEntity } = UserEntity.fromObject(user)
 
       return {
         user: userEntity,
-        token: 'ABC'
-      };
-
+        token: 'ABC',
+      }
     } catch (error) {
       throw CustomError.internalServer(`${error}`)
     }
