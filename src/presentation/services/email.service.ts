@@ -40,7 +40,6 @@ export class EmailService {
         html: htmlBody,
         attachments: attachements,
       })
-
       // logger.info(sentInformation)
 
       return true
