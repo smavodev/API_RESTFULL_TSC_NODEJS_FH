@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { CategoryController } from './controller'
-import { AuthMiddleware } from '../middlewares/auth.middleware';
+import { AuthMiddleware } from '../middlewares/auth.middleware'
 import { CategoryService } from '../services'
 
 export class CategoryRoutes {
@@ -11,7 +11,7 @@ export class CategoryRoutes {
 
     // Definir las rutas
     router.get('/', controller.getCategories)
-    router.post( '/',[ AuthMiddleware.validateJWT ],controller.createCategory );
+    router.post('/', [AuthMiddleware.validateJWT], controller.createCategory)
 
     return router
   }

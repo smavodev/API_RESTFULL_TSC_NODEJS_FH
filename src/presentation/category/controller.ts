@@ -1,7 +1,7 @@
 import { Response, Request } from 'express'
 import { CreateCategoryDto, CustomError } from '../../domain'
 import { CategoryService } from '../services'
-import {logger} from '../../config'
+import { logger } from '../../config'
 
 export class CategoryController {
   // DI
@@ -21,15 +21,14 @@ export class CategoryController {
 
     if (error) return res.status(400).json({ error })
 
-    res.status(201).json(createCategoryDto )
-    
-    // this.categoryService
-    //   .createCategory(createCategoryDto!, req.body.user)
-    //   .then((category) => res.status(201).json(category))
-    //   .catch((error) => this.handleError(error, res))
+    this.categoryService
+      .createCategory(createCategoryDto!, req.body.user)
+      .then((category) => res.status(201).json(category))
+      // eslint-disable-next-line @typescript-eslint/no-shadow
+      .catch((error) => this.handleError(error, res))
   }
 
   getCategories = async (req: Request, res: Response) => {
-    res.status(200).send({data : "get Categories"})
+    res.status(200).send({ data: 'get Categories' })
   }
 }
