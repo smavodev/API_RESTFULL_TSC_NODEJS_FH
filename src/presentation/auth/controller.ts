@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { CustomError, LoginUserDto, RegisterUserDto } from '../../domain'
 import { AuthService } from '../services'
-import logger from '../../config/logger'
+import { logger } from '../../config'
 
 export class AuthController {
   constructor(public readonly authService: AuthService) {}

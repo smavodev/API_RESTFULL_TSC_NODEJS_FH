@@ -1,5 +1,5 @@
 import nodemailer, { Transporter } from 'nodemailer'
-import logger from '../../config/logger'
+import { logger}  from '../../config'
 
 export interface SendMailOptions {
   to: string | string[]

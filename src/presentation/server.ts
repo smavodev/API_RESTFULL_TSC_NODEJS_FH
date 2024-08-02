@@ -1,6 +1,6 @@
 import express, { Router } from 'express'
 import path from 'path'
-import logger from '../config/logger'
+import { logger } from '../config'
 
 interface Options {
   port: number
