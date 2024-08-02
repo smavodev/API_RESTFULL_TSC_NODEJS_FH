@@ -1,5 +1,5 @@
 import { Response, Request } from 'express'
-import { CreateCategoryDto, CustomError } from '../../domain'
+import { CreateCategoryDto, CustomError, PaginationDto } from '../../domain'
 import { CategoryService } from '../services'
 import { logger } from '../../config'
 
@@ -29,6 +29,11 @@ export class CategoryController {
   }
 
   getCategories = async (req: Request, res: Response) => {
-    res.status(200).send({ data: 'get Categories' })
+
+    this.categoryService
+      .getCategories()
+      .then((categories) => res.json(categories))
+      // eslint-disable-next-line @typescript-eslint/no-shadow
+      .catch((error) => this.handleError(error, res))
   }
 }

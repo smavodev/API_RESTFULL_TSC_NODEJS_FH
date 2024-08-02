@@ -1,5 +1,10 @@
 import { CategoryModel } from '../../data'
-import { CreateCategoryDto, CustomError, UserEntity } from '../../domain'
+import {
+  CreateCategoryDto,
+  CustomError,
+  UserEntity,
+  PaginationDto,
+} from '../../domain'
 
 export class CategoryService {
   // DI
@@ -31,7 +36,18 @@ export class CategoryService {
   }
 
   async getCategories() {
-    // Implement
-    return true
+    try {
+      const categories = await CategoryModel.find()
+
+      return categories.map(category => ({
+          id: category.id,
+          name: category.name,
+          available: category.available,
+        }))
+
+    } catch (error) {
+      throw CustomError.internalServer('Internal Server Error')
+    }
   }
+
 }
