@@ -27,7 +27,7 @@ export class AuthService {
 
       await user.save()
 
-      if (!user.email) throw CustomError.badRequest('no se encontro Email')
+      if (!user.email) throw CustomError.badRequest('Email not found')
       await this.sendEmailValidationLink(user.email)
 
       const { password, ...userEntity } = UserEntity.fromObject(user)
