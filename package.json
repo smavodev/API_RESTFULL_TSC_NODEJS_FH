@@ -9,7 +9,8 @@
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js",
     "lint": "eslint . --fix --ext .ts",
-    "format": "prettier --list-different --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+    "format": "prettier --list-different --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "seed": "ts-node-dev ./src/data/seed/seed.ts"
   },
   "keywords": [
     "TypeScript",

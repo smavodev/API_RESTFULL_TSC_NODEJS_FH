@@ -34,7 +34,7 @@ export class ProductService {
           // .populate('user')
           // .populate('category'),
           .populate('user', 'email')
-          .populate('category', 'name')
+          .populate('category', 'name'),
       ])
 
       return {
