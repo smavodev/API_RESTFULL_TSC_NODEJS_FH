@@ -70,5 +70,4 @@ export class CategoryService {
       throw CustomError.internalServer('Internal Server Error')
     }
   }
-
 }
