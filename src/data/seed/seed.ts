@@ -1,7 +1,6 @@
 import { envs, logger } from '../../config'
 import { CategoryModel, MongoDatabase, ProductModel, UserModel } from '../mongo'
 import { seedData } from './data'
-
 ;(async () => {
   await MongoDatabase.connect({
     dbName: envs.MONGO_DB_NAME,
