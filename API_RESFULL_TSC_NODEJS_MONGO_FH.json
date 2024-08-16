@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "API_RESFULL_TSC_NODEJS_MONGO_FH",
     "collectionId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
-    "dateExported": "2024-08-05T22:30:03.624Z",
+    "dateExported": "2024-08-16T00:59:29.217Z",
     "version": "1.2",
     "folders": [
         {
@@ -32,26 +32,19 @@
             "containerId": "",
             "created": "2024-08-05T21:17:37.979Z",
             "sortNum": 40000
-        },
-        {
-            "_id": "173fe94f-c5a4-46aa-83a4-469d609ed290",
-            "name": "Upload Copy",
-            "containerId": "",
-            "created": "2024-08-05T22:27:44.088Z",
-            "sortNum": 50000
         }
     ],
     "requests": [
         {
             "_id": "bb39bfb0-8e63-4807-9f2b-b17df53b2065",
             "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
-            "containerId": "",
+            "containerId": "b9f81a6c-ce77-4346-8204-0d585ef4314b",
             "name": "POST Register",
             "url": "http://localhost:4000/api/auth/register",
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-07-30T16:54:31.982Z",
-            "modified": "2024-08-02T21:42:37.872Z",
+            "modified": "2024-08-16T00:58:33.099Z",
             "headers": [],
             "body": {
                 "type": "formencoded",
@@ -75,13 +68,13 @@
         {
             "_id": "5fec65dd-0214-481c-803e-3a6f8a15e22d",
             "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
-            "containerId": "",
+            "containerId": "b9f81a6c-ce77-4346-8204-0d585ef4314b",
             "name": "POST Login",
             "url": "http://localhost:4000/api/auth/login",
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-07-31T14:57:46.887Z",
-            "modified": "2024-08-02T21:42:52.839Z",
+            "modified": "2024-08-16T00:43:26.030Z",
             "headers": [],
             "body": {
                 "type": "formencoded",
@@ -89,7 +82,7 @@
                 "form": [
                     {
                         "name": "email",
-                        "value": "smavodev@gmail.com"
+                        "value": "smavodev1@gmail.com"
                     },
                     {
                         "name": "password",
@@ -99,60 +92,15 @@
             }
         },
         {
-            "_id": "0dfce1c5-85a4-448f-944a-e6fd558d8911",
-            "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
-            "containerId": "",
-            "name": "POST Category",
-            "url": "http://localhost:4000/api/categories",
-            "method": "POST",
-            "sortNum": 30000,
-            "created": "2024-08-02T13:56:31.397Z",
-            "modified": "2024-08-02T22:50:25.480Z",
-            "headers": [],
-            "params": [
-                {
-                    "name": "page",
-                    "value": "2",
-                    "isDisabled": true,
-                    "isPath": false
-                },
-                {
-                    "name": "limit",
-                    "value": "5",
-                    "isDisabled": true,
-                    "isPath": false
-                }
-            ],
-            "body": {
-                "type": "formencoded",
-                "raw": "",
-                "form": [
-                    {
-                        "name": "name",
-                        "value": "Producto 10"
-                    },
-                    {
-                        "name": "available",
-                        "value": "true",
-                        "isDisabled": true
-                    }
-                ]
-            },
-            "auth": {
-                "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YWQ1MmNlMTMyODg3MWFlZDNkNzBmMyIsImVtYWlsIjoic21hdm9kZXZAZ21haWwuY29tIiwiaWF0IjoxNzIyNjM4OTk3LCJleHAiOjE3MjI2NDI1OTd9.R3ZQddN27QxX51IGBuonpvmCwy1EMygHoTtOrilAzp4"
-            }
-        },
-        {
             "_id": "bee499c0-1bca-4f9e-a45b-1baa2ef665d7",
             "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
-            "containerId": "",
+            "containerId": "b9f81a6c-ce77-4346-8204-0d585ef4314b",
             "name": "GET Validate Email",
-            "url": "http://localhost:3000/api/auth/validate-email/123",
+            "url": "http://localhost:4000/api/auth/validate-email/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbi52Lm9ydGVnYUBnbWFpbC5jb20iLCJpYXQiOjE3MjM3Njk3ODcsImV4cCI6MTcyMzc3Njk4N30.Om7512ZmD_bn4h6q7kcRqmyoKXUs8eir6x0gk34mgzc",
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-08-02T13:57:02.180Z",
-            "modified": "2024-08-02T13:57:52.991Z",
+            "modified": "2024-08-16T00:59:12.947Z",
             "headers": [],
             "body": {
                 "type": "formencoded",
@@ -192,6 +140,51 @@
                     "isPath": false
                 }
             ]
+        },
+        {
+            "_id": "0dfce1c5-85a4-448f-944a-e6fd558d8911",
+            "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
+            "containerId": "742fa810-ca57-4df2-88b1-8f44d3a529fa",
+            "name": "POST Category",
+            "url": "http://localhost:4000/api/categories",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-08-02T13:56:31.397Z",
+            "modified": "2024-08-02T22:50:25.480Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "2",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "5",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Producto 10"
+                    },
+                    {
+                        "name": "available",
+                        "value": "true",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YWQ1MmNlMTMyODg3MWFlZDNkNzBmMyIsImVtYWlsIjoic21hdm9kZXZAZ21haWwuY29tIiwiaWF0IjoxNzIyNjM4OTk3LCJleHAiOjE3MjI2NDI1OTd9.R3ZQddN27QxX51IGBuonpvmCwy1EMygHoTtOrilAzp4"
+            }
         },
         {
             "_id": "4a0319fb-f268-47bd-a0a2-1850c3fa08b0",
@@ -264,29 +257,6 @@
             }
         },
         {
-            "_id": "09d161f5-8102-4a2f-a186-19f24a6abb3b",
-            "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
-            "containerId": "173fe94f-c5a4-46aa-83a4-469d609ed290",
-            "name": "POST Image",
-            "url": "http://localhost:4000/api/upload/single/categories",
-            "method": "POST",
-            "sortNum": 70000,
-            "created": "2024-08-05T22:27:44.088Z",
-            "modified": "2024-08-05T22:27:44.088Z",
-            "headers": [],
-            "body": {
-                "type": "formdata",
-                "raw": "",
-                "form": [],
-                "files": [
-                    {
-                        "name": "file",
-                        "value": "c:\\Users\\Smavodev\\Downloads\\posman_local\\Screenshot_3.png"
-                    }
-                ]
-            }
-        },
-        {
             "_id": "ea82c2e8-fd5d-459d-80b8-e77e76a8bf9d",
             "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
             "containerId": "acb43180-0040-46b3-99ab-bf335d2bb9a0",
@@ -314,36 +284,9 @@
             }
         },
         {
-            "_id": "4bbee62b-d37b-479f-bcb8-965f29204587",
-            "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
-            "containerId": "173fe94f-c5a4-46aa-83a4-469d609ed290",
-            "name": "POST Images ",
-            "url": "http://localhost:4000/api/upload/multiple/products",
-            "method": "POST",
-            "sortNum": 80000,
-            "created": "2024-08-05T22:27:44.089Z",
-            "modified": "2024-08-05T22:27:44.088Z",
-            "headers": [],
-            "body": {
-                "type": "formdata",
-                "raw": "",
-                "form": [],
-                "files": [
-                    {
-                        "name": "file",
-                        "value": "c:\\Users\\Smavodev\\Downloads\\posman_local\\Screenshot_3.png"
-                    },
-                    {
-                        "name": "file",
-                        "value": "c:\\Users\\Smavodev\\Downloads\\posman_local\\Screenshot_1.png"
-                    }
-                ]
-            }
-        },
-        {
             "_id": "60d09dcd-d052-4aa8-a42b-ae2ab6dc6a1d",
             "colId": "9c1242e7-ee43-4100-9957-d1a97d3a9fb8",
-            "containerId": "173fe94f-c5a4-46aa-83a4-469d609ed290",
+            "containerId": "acb43180-0040-46b3-99ab-bf335d2bb9a0",
             "name": "GET Image",
             "url": "http://localhost:4000/api/images/products/73d15bf7-466f-4bb9-9835-02959798cfb8.png",
             "method": "GET",
@@ -353,5 +296,5 @@
             "headers": []
         }
     ],
-    "ref": "FRvDY-Sh_kmyg-sO8Wq2B4HKdcJMAJvjk2sySUKYgfwsjzz8a7O5n24JeDUtilUlwjQodVrUW4j9F6hIifkfpw"
+    "ref": "FRvDY-Sh_kmyg-sO8Wq2B8N1RMiKV5Jl3fjgSYhXtdSs5-uVren_-eKJB1LgMcCnVF7fV018a5Kn6uIqq3XwnA"
 }
